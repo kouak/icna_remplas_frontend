@@ -10,10 +10,10 @@
  */
 angular
   .module('remplacementsApp')
-  .controller('StatsController', StatsController);
+  .controller('SplashController', SplashController);
 
 
-function StatsController() {
+function SplashController() {
   var vm = this;
   vm.stats = {
     totalUsers: 123,
