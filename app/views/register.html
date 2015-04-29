@@ -1,0 +1,28 @@
+<form action="http://localhost:1337/auth/local/register" method="POST">
+  <md-input-container>
+    <label>Prénom</label>
+    <input type="text" ng-model="vm.user.firstName">
+  </md-input-container>
+  <md-input-container>
+    <label>Nom</label>
+    <input type="text" ng-model="vm.user.name">
+  </md-input-container>
+  <md-input-container>
+    <label>Email</label>
+    <input type="text" ng-model="vm.user.email">
+  </md-input-container>
+  <md-input-container>
+    <label>Mot de passe</label>
+    <input type="password" ng-model="vm.user.password">
+  </md-input-container>
+  <md-input-container>
+    <label>Confirmation</label>
+    <input type="password" ng-model="vm.user.passwordConfirmation">
+  </md-input-container>
+  <md-input-container>
+    <label>Téléphone</label>
+    <input type="text" ng-model="vm.user.phone">
+  </md-input-container>
+
+  <input type="submit">
+</form>
