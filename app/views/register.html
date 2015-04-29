@@ -24,5 +24,18 @@
     <input type="text" ng-model="vm.user.phone">
   </md-input-container>
 
+  <md-select ng-model="vm.user.center" md-on-open="vm.loadCenters()">
+    <md-select-label>{{vm.user.center ? vm.user.center.name : 'Centre' }}</md-select-label>
+    <md-option ng-value="center" ng-repeat="center in vm.centers">{{center.name}}</md-option>
+  </md-select>
+
+  <md-select ng-model="vm.user.team" md-on-open="vm.loadTeams()">
+    <md-select-label>{{vm.user.team ? vm.user.team.name : 'Equipe' }}</md-select-label>
+    <md-option ng-value="team" ng-repeat="team in vm.teams">{{team.name}}</md-option>
+  </md-select>
+
   <input type="submit">
 </form>
+
+
+{{vm.user}}
