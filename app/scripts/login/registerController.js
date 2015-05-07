@@ -13,8 +13,8 @@ angular
   .controller('RegisterController', RegisterController);
 
 
-RegisterController.$inject = ['$resource'];
-function RegisterController($resource) {
+RegisterController.$inject = ['$resource', 'backendApiUrl'];
+function RegisterController($resource, backendApiUrl) {
   var vm = this;
 
   vm.user = {};
@@ -25,14 +25,14 @@ function RegisterController($resource) {
   
   vm.loadTeams = function() {
     vm.teams = [];
-    return $resource('http://localhost:1337/team', {populate: '[]', center: vm.user.center.id}).query().$promise.then(function(results) {
+    return $resource(backendApiUrl + '/teams', {center: vm.user.center.id}).query().$promise.then(function(results) {
       vm.teams = results;
     });
   };
 
   vm.loadCenters = function() {
     vm.centers = [];
-    return $resource('http://localhost:1337/center', {populate: '[]'}).query().$promise.then(function(results) {
+    return $resource(backendApiUrl + '/centers', {}).query().$promise.then(function(results) {
       vm.centers = results;
     });
   };
