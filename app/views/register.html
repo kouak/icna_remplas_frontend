@@ -29,7 +29,7 @@
     <md-option ng-value="center" ng-repeat="center in vm.centers">{{center.name}}</md-option>
   </md-select>
 
-  <md-select ng-model="vm.user.team" md-on-open="vm.loadTeams()">
+  <md-select ng-disabled="!vm.user.center" ng-model="vm.user.team" md-on-open="vm.loadTeams()">
     <md-select-label>{{vm.user.team ? vm.user.team.name : 'Equipe' }}</md-select-label>
     <md-option ng-value="team" ng-repeat="team in vm.teams">{{team.name}}</md-option>
   </md-select>
