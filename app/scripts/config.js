@@ -18,4 +18,4 @@ angular.module('remplacementsApp')
   });
 
 })
-.value('backendUrl', 'http://localhost:1337/');
+.value('backendUrl', 'http://localhost:3000/');
