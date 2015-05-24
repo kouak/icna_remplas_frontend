@@ -5,11 +5,13 @@ angular.module('remplacementsApp')
   $routeProvider
   .when('/', {
     templateUrl: 'views/splash.html',
-    controller: 'SplashController',
+    controller: 'StatsController',
     controllerAs: 'vm'
   })
   .when('/login', {
-    templateUrl: 'views/login.html'
+    templateUrl: 'views/auth/login.html',
+    controller: 'LoginController',
+    controllerAs: 'vm'
   })
   .when('/register', {
     templateUrl: 'views/register.html',
